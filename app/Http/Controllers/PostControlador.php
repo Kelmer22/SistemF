@@ -30,16 +30,7 @@ class PostControlador extends Controller
         return redirect('/');
     }
 
-    public function cadastro(Request $request)
-    {
-        $post = new cadastro();
-        $post->email = $request->input('nome'); 
-        $post->mensagem = $request->input('email'); 
-        $post->save();
-
-        return redirect('/');
-    }
-
+    
     public function destroy($id) {
         $post = Post::find($id);
         if (isset($post)) {
